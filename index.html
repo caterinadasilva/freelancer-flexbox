@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Freelancer</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Desarrollo Ejercicio Guiado y Evaluado de la Lección 25: Display & Grid System">
+	<meta name="description" content="Desarrollo Ejercicio Guiado y Evaluado de la Lección 26: Flexbox">
 	<meta name="author" content="Caterina Da Silva">
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
@@ -15,14 +15,12 @@
 	<div id="top"></div>
 	<header id="js-header" class="clearfix">
 		<div class="container">
-			<div class="row">
 		      	<a href="#top"><h1 id="logo">Start Bootstrap</h1></a>
 		      	<nav>
 		          	<a href="#portfolio">Portfolio</a>
 		          	<a href="#about">About</a>
 		          	<a href="#contact">Contact</a>
 		      	</nav>
-		    </div>
 	  	</div>
  	</header>
     <section id="hero" class="clearfix bg">
@@ -46,7 +44,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="project col-4">
+				<div class="project">
 					<div class="title">
 						<h3>A Bicyclops Built For Two</h3>
 						<div class="star-line"></div>
@@ -59,7 +57,7 @@
 						<small>Service: <a href="#">Web Development</a></small>
 					</div>
 				</div>
-				<div class="project col-4">
+				<div class="project">
 					<div class="title">
 						<h3>I Second That Emotion</h3>
 						<div class="star-line"></div>
@@ -72,7 +70,7 @@
 						<small>Service: <a href="#">Web Development</a></small>
 					</div>
 				</div>
-				<div class="project col-4">
+				<div class="project">
 					<div class="title">
 						<h3>The Duh-Vinci Code</h3>
 						<div class="star-line"></div>
@@ -87,7 +85,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="project col-4">
+				<div class="project">
 					<div class="title">
 						<h3>Is the Space Pope reptilian?</h3>
 						<div class="star-line"></div>
@@ -100,7 +98,7 @@
 						<small>Service: <a href="#">Web Development</a></small>
 					</div>
 				</div>
-				<div class="project col-4">
+				<div class="project">
 					<div class="title">
 						<h3>Monkey of moderate intelligence who wears a suit</h3>
 						<div class="star-line"></div>
@@ -112,7 +110,7 @@
 						<small>Date: <a href="#">April 2014</a></small>
 						<small>Service: <a href="#">Web Development</a></small>
 					</div>
-				</div><div class="project col-4">
+				</div><div class="project">
 					<div class="title">
 						<h3>A film about my nephew</h3>
 						<div class="star-line"></div>
@@ -130,23 +128,23 @@
 	</section>
 	<section id="about" class="clearfix bg">
 		<div class="container">
-			<div class="col-8 centered">
+			<div class="centered">
 				<div class="row">
 					<div class="title">
 						<h2>About</h2>
 						<div class="star-line"></div>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-6 left">
+				<div class="row text">
+					<div class="left">
 						<p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
 					</div>
-					<div class="col-6 right">
+					<div class="right">
 						<p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your project, this template is the perfect starting point!</p>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-4 centered text-center">
+					<div class="centered text-center">
 		            	<a href="#" class="btn download">Download Theme</a>
 					</div>
 		        </div>
@@ -155,7 +153,7 @@
 	</section>
 	<section id="contact" class="clearfix">
 		<div class="container">
-			<div class="col-8 centered">
+			<div class="centered">
 				<div class="row">
 					<div class="title">
 					  	<h2>Contact me</h2>
@@ -193,13 +191,13 @@
 		<div class="top">
 			<div class="container">
 				<div class="row">
-					<div class="col-4">
+					<div class="footer-text">
 						<div class="row">
 							<h4>Location</h4>
 							<address>3481 Melrose Place<br>Beverly Hills, CA 90210</address>
 						</div>
 					</div>
-					<div class="col-4">
+					<div class="footer-text">
 						<div class="row">
 							<h4>Around the web</h4>
 							<a href="#" class="btn-social">
@@ -219,7 +217,7 @@
 							</a>
 						</div>
 					</div>
-					<div class="col-4">
+					<div class="footer-text">
 						<div class="row">
 							<h4>About Freelancer</h4>
 							<small>Freelance is a free to use, open source Bootstrap theme created by <a href="#">Start Bootstrap</a>.</small>

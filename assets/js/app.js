@@ -1,16 +1,21 @@
-// // EFECTO SCROLL DEL NAV // //
-/* Código de Liliana Kastilio: https://codepen.io/lili2311/pen/dJjuL< */
-window.addEventListener('scroll', function () {
-  const distanceY = window.pageYOffset || document.documentElement.scrollTop,
-  shrinkOn = 200,
-  headerEl = document.getElementById('js-header');
-  
-  if (distanceY > shrinkOn) {
-    headerEl.classList.add("smaller");
-  } else {
-    headerEl.classList.remove("smaller");
-  }
-});
+// // MENÚ // //
+(function menu() {
+	var lastScrollTop = 0;
+	window.addEventListener("scroll", function() {
+		var currentScroll = window.pageYOffset || document.body.scrollTop;
+		if (currentScroll > lastScrollTop) {
+			document.getElementById("navigation").classList.remove("no-bg");
+			document.getElementById("signUpBtn").classList.remove("hidden-btn");
+		} else {
+			document.getElementById("navigation").classList.remove("no-bg");
+			if ( currentScroll <= 2 ) {
+				document.getElementById("navigation").classList.add("no-bg");
+				document.getElementById("signUpBtn").classList.add("hidden-btn");
+			}
+		}
+		lastScrollTop = currentScroll;
+	}, false);
+})();
 
 // // MODAL // //
 (function modal(){

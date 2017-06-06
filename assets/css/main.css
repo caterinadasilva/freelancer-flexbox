@@ -6,7 +6,11 @@
 	overflow: hidden;
     padding: 10em 0 5em;
 }
-
+#hero .container {
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
 /*
 // PORTFOLIO
 */
@@ -14,9 +18,21 @@
     padding: 5em 0;
     overflow: hidden;
 }
+#portfolio .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#portfolio .row {
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+}
 .project {
 	position: relative;
 	margin-bottom: 1em;
+	width: 30%;
 }
 .project > * {
 	display: none;
@@ -64,7 +80,6 @@
 }
 /* WORK MODAL */
 #work-modal {
-    display: block;
     position: fixed;
     z-index: 999;
     top: 0;
@@ -73,6 +88,10 @@
     padding: 3em 5em;
     width: 100%;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 #work-modal #close {
 	width: 50px;
@@ -118,7 +137,6 @@
     width: 100%;
 }
 .modal-body .details small {
-	display: inline-block;
 	margin: 0 .25em 1em;
 }
 
@@ -130,6 +148,19 @@
     padding: 5em 0;
     overflow: hidden;
 }
+#about .centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+#about .text {
+    display: flex;
+    margin: 1em 5em;
+}
+#about .text > div {
+    margin: 0 1em;
+}
 
 /*
 // CONTACT
@@ -139,7 +170,15 @@
     padding: 5em 0;
     overflow: hidden;
 }
-
+#contact .container {
+    justify-content: center;
+}
+#contact .centered {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    justify-content: space-between;
+}
 /*
 // EXTRAS
 */
@@ -153,7 +192,6 @@
     max-width: 640px;
 }
 .title .star-line {
-	display: block;
 	width: 230px;
 	height: 5px;
 	background-color: #2C3E50;

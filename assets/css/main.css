@@ -48,6 +48,9 @@
 	display: block;
 }
 .project:after {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     content: "\f00e";
     font-size: 5rem;
     position: absolute;
@@ -61,7 +64,7 @@
     font-family: "FontAwesome";
     box-sizing: border-box;
     text-align: center;
-    padding: 1em 0;
+    line-height: 100%;
     opacity: 0;
 	-webkit-transition: ease opacity 0.5s;
 	-moz-transition: ease opacity 0.5s;

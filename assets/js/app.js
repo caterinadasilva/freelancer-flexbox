@@ -4,13 +4,11 @@
 	window.addEventListener("scroll", function() {
 		var currentScroll = window.pageYOffset || document.body.scrollTop;
 		if (currentScroll > lastScrollTop) {
-			document.getElementById("navigation").classList.remove("no-bg");
-			document.getElementById("signUpBtn").classList.remove("hidden-btn");
+			document.getElementById("js-header").classList.add("smaller");
 		} else {
-			document.getElementById("navigation").classList.remove("no-bg");
+			document.getElementById("js-header").classList.add("smaller");
 			if ( currentScroll <= 2 ) {
-				document.getElementById("navigation").classList.add("no-bg");
-				document.getElementById("signUpBtn").classList.add("hidden-btn");
+				document.getElementById("js-header").classList.remove("smaller");
 			}
 		}
 		lastScrollTop = currentScroll;
@@ -19,22 +17,32 @@
 
 // // MODAL // //
 (function modal(){
+	var body = document.getElementsByTagName('body')[0];
 	var boxes = Array.from(document.getElementsByClassName("project"));
-	var modal = document.getElementById("work-modal");
-	var modalBody = document.getElementsByClassName('modal-body')[0];
-	var closeX = document.getElementById("close");
-	var closeBtn = document.getElementsByClassName('close')[0];
 	boxes.forEach(function(box){
 		box.addEventListener("click", function(){
 			event.preventDefault();
+			var workModal = document.createElement('div');
+			workModal.setAttribute('id', 'work-modal');
+			var modalBody = document.createElement('div');
+			modalBody.classList.add('modal-body');
 			modalBody.innerHTML = box.innerHTML;
-			modal.classList.remove("hidden");
+			var closeBtn = document.createElement('button');
+			closeBtn.classList.add('btn', 'close');
+			var closeBtnTxt = document.createTextNode('Close');
+			closeBtn.appendChild(closeBtnTxt);
+			modalBody.appendChild(closeBtn);
+			var closeX = document.createElement('div');
+			closeX.setAttribute('id', 'close');
+			workModal.appendChild(modalBody);
+			workModal.appendChild(closeX);
 			closeX.addEventListener("click",function(){
-				modal.classList.add("hidden");
+				workModal.classList.add("hidden");
 			});
 			closeBtn.addEventListener("click",function(){
-				modal.classList.add("hidden");
+				workModal.classList.add("hidden");
 			});
+			body.appendChild(workModal);
 		});
 	});
 })();

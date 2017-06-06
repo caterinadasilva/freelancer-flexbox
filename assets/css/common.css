@@ -383,8 +383,14 @@ footer .top .row {
     display: flex;
     flex-direction: row;
 }
+footer .footer-text {
+    width: 30%;
+}
 footer .footer-text .row {
     flex-direction: column;
+}
+footer .footer-text:nth-child(2) .row {
+    flex-direction: row;
 }
 footer .top small {
 	font-size: 110%;
@@ -394,4 +400,14 @@ footer .top small {
 footer .bot {
 	padding: 25px 0;
     background-color: #233140;
+}
+footer .bot .container {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+footer .bot .container .row {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
